@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    // Check if the user is in Facebook's in-app browser
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const isFacebookApp = userAgent.includes("FBAN") || userAgent.includes("FBAV");
+
+    if (isFacebookApp) {
+      // Redirect to the external browser
+      window.location.replace("https://ryanoneillmusician.com"); // Replace with your main website's URL
+    } else {
+      // Redirect directly to your website
+      window.location.href = "https://ryanoneillmusician.com"; // Replace with your main website's URL
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
